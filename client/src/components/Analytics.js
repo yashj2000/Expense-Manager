@@ -81,6 +81,7 @@ const Analytics = ({ allTransaction }) => {
                   strokeColor={"red"}
                   className="mx-2"
                   percent={totalExpenseTurnoverPercent.toFixed(0)}
+                  
                 />
               </div>
             </div>
