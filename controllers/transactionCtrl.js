@@ -22,7 +22,7 @@ const getAllTransaction = async (req, res) => {
     res.status(200).json(transactions);
   } catch (error) {
     console.log(error);
-    res.status(500).json(erorr);
+    res.status(500).json(error);
   }
 };
 

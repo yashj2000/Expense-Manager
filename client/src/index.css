@@ -5,25 +5,19 @@
 }
 
 .content {
-  height: 100vh;
+  height: 100%;
 }
 
-.resgister-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-}
-
-/* transaction page */
+/* transection page */
 .filters {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
   box-shadow: 0 0 3px gray;
+  margin-bottom: 10px;
 }
-/* transaction page */
+/* transection page */
 
 /* antd icons */
 
@@ -43,4 +37,8 @@
 }
 .inactive-icon {
   color: gray;
+}
+
+.filter-tab .ant-select-selector {
+  width: 150px !important;
 }

@@ -43,8 +43,8 @@ const HomePage = () => {
       dataIndex: "category",
     },
     {
-      title: "Refrence",
-      dataIndex: "refrence",
+      title: "Reference",
+      dataIndex: "reference",
     },
     {
       title: "Actions",
@@ -165,12 +165,12 @@ const HomePage = () => {
             <Select.Option value="income">INCOME</Select.Option>
             <Select.Option value="expense">EXPENSE</Select.Option>
           </Select>
-          {frequency === "custom" && (
+          {/* {frequency === "custom" && (
             <RangePicker
               value={selectedDate}
               onChange={(values) => setSelectedate(values)}
             />
-          )}
+          )} */}
         </div>
         <div className="switch-icons">
           <UnorderedListOutlined
@@ -238,7 +238,7 @@ const HomePage = () => {
           <Form.Item label="Date" name="date">
             <Input type="date" />
           </Form.Item>
-          <Form.Item label="Refrence" name="refrence">
+          <Form.Item label="Reference" name="reference">
             <Input type="text" />
           </Form.Item>
           <Form.Item label="Description" name="description">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
+import "../../styles/HeaderStyles.css";
 
 const Header = () => {
   const [loginUser, setLoginUser] = useState("");

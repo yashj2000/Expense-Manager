@@ -1,0 +1,30 @@
+/* footer.css */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    /* Optionally, you can add a fixed height for the footer if needed */
+    /* height: 60px; */
+  }
+  
+  /* Optional: If you want the footer to stay at the bottom of the page even if the content is not enough to push it down, you can use min-height on the layout container */
+  .layout-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .icons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Add some spacing between the content and the footer */
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: white;
+  }
+  
