@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Yash",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",

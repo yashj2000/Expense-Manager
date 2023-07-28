@@ -1,6 +1,6 @@
 import React from "react";
 import { Progress } from "antd";
-const Analytics = ({ allTransection }) => {
+const Analytics = ({ allTransaction }) => {
   // category
   const categories = [
     "salary",
@@ -15,11 +15,11 @@ const Analytics = ({ allTransection }) => {
   ];
 
   // total transaction
-  const totalTransaction = allTransection.length;
-  const totalIncomeTransactions = allTransection.filter(
+  const totalTransaction = allTransaction.length;
+  const totalIncomeTransactions = allTransaction.filter(
     (transaction) => transaction.type === "income"
   );
-  const totalExpenseTransactions = allTransection.filter(
+  const totalExpenseTransactions = allTransaction.filter(
     (transaction) => transaction.type === "expense"
   );
   const totalIncomePercent =
@@ -28,15 +28,15 @@ const Analytics = ({ allTransection }) => {
     (totalExpenseTransactions.length / totalTransaction) * 100;
 
   //total turnover
-  const totalTurnover = allTransection.reduce(
+  const totalTurnover = allTransaction.reduce(
     (acc, transaction) => acc + transaction.amount,
     0
   );
-  const totalIncomeTurnover = allTransection
+  const totalIncomeTurnover = allTransaction
     .filter((transaction) => transaction.type === "income")
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
-  const totalExpenseTurnover = allTransection
+  const totalExpenseTurnover = allTransaction
     .filter((transaction) => transaction.type === "expense")
     .reduce((acc, transaction) => acc + transaction.amount, 0);
 
@@ -104,7 +104,7 @@ const Analytics = ({ allTransection }) => {
         <div className="col-md-4">
           <h4>Categorywise Income</h4>
           {categories.map((category) => {
-            const amount = allTransection
+            const amount = allTransaction
               .filter(
                 (transaction) =>
                   transaction.type === "income" &&
@@ -130,7 +130,7 @@ const Analytics = ({ allTransection }) => {
         <div className="col-md-4">
           <h4>Categorywise Expense</h4>
           {categories.map((category) => {
-            const amount = allTransection
+            const amount = allTransaction
               .filter(
                 (transaction) =>
                   transaction.type === "expense" &&

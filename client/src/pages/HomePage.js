@@ -16,7 +16,7 @@ const { RangePicker } = DatePicker;
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [allTransection, setAllTransection] = useState([]);
+  const [allTransaction, setAllTransaction] = useState([]);
   const [frequency, setFrequency] = useState("7");
   const [selectedDate, setSelectedate] = useState([]);
   const [type, setType] = useState("all");
@@ -75,14 +75,14 @@ const HomePage = () => {
       try {
         const user = JSON.parse(localStorage.getItem("user"));
         setLoading(true);
-        const res = await axios.post("/transections/get-transection", {
+        const res = await axios.post("/transactions/get-transaction", {
           userid: user._id,
           frequency,
           selectedDate,
           type,
         });
         setLoading(false);
-        setAllTransection(res.data);
+        setAllTransaction(res.data);
         console.log(res.data);
       } catch (error) {
         console.log(error);
@@ -96,7 +96,7 @@ const HomePage = () => {
   const handleDelete = async (record) => {
     try {
       setLoading(true);
-      await axios.post("/transections/delete-transection", {
+      await axios.post("/transactions/delete-transaction", {
         transacationId: record._id,
       });
       setLoading(false);
@@ -114,7 +114,7 @@ const HomePage = () => {
       const user = JSON.parse(localStorage.getItem("user"));
       setLoading(true);
       if (editable) {
-        await axios.post("/transections/edit-transection", {
+        await axios.post("/transactions/edit-transaction", {
           payload: {
             ...values,
             userId: user._id,
@@ -124,7 +124,7 @@ const HomePage = () => {
         setLoading(false);
         message.success("Transaction Updated Successfully");
       } else {
-        await axios.post("/transections/add-transection", {
+        await axios.post("/transactions/add-transaction", {
           ...values,
           userid: user._id,
         });
@@ -135,7 +135,7 @@ const HomePage = () => {
       setEditable(null);
     } catch (error) {
       setLoading(false);
-      message.error("Faild to add transection");
+      message.error("Faild to add transaction");
     }
   };
 
@@ -197,13 +197,13 @@ const HomePage = () => {
       </div>
       <div className="content">
         {viewData === "table" ? (
-          <Table columns={columns} dataSource={allTransection} />
+          <Table columns={columns} dataSource={allTransaction} />
         ) : (
-          <Analytics allTransection={allTransection} />
+          <Analytics allTransaction={allTransaction} />
         )}
       </div>
       <Modal
-        title={editable ? "Edit Transaction" : "Add Transection"}
+        title={editable ? "Edit Transaction" : "Add Transaction"}
         open={showModal}
         onCancel={() => setShowModal(false)}
         footer={false}
