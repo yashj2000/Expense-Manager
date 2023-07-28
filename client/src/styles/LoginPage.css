@@ -1,4 +1,28 @@
-.login-page {
+/* LoginPage.css */
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header card styles */
+  .header-card {
+    background-color: #d4d4d4;
+    text-align: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+  }
+  
+  .header-card h1 {
+    margin: 0;
+    color: #344265;
+  }
+  
+  /* Login page styles */
+  .login-page {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -13,10 +37,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     width: 60%;
+    border-radius: 10px;
   }
   
   .login-image {
-    width: 60%; /* Match image size with register.css */
+    width: 60%;
   }
   
   .login-image img {
@@ -32,30 +57,10 @@
   }
   
   .login-form h1 {
+    margin-top: 10px;
     text-align: center;
     font-weight: bold;
-    margin: 30px;
     color: #344265;
-  }
-  
-  .login-form .ant-form-item-label label {
-    color: #344265 !important;
-  }
-  
-  .login-form input {
-    font-size: 14px; /* Adjust input field size */
-    padding: 8px 12px; /* Adjust input field padding */
-  }
-  
-  .login-form button {
-    background-color: #344265;
-    color: white;
-    padding: 8px 16px;
-  }
-  
-  .login-form button:hover {
-    background-color: black;
-    color: white;
   }
   
   .login-form a {
@@ -64,5 +69,29 @@
   
   .login-form a:hover {
     color: black !important;
+  }
+  
+  .login-form button {
+    background-color: #344265;
+    color: white;
+  }
+  
+  .login-form input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .login-form button {
+    padding: 8px 16px;
+  }
+  
+  .login-form input:focus {
+    border: 1px solid #344265 !important;
+    color: #344265;
+  }
+  
+  .login-form button:hover {
+    background-color: black;
+    color: white;
   }
   

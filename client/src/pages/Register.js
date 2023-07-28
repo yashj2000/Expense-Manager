@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import "../styles/RegisterPage.css";
+import Footer from "../components/Layout/Footer";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,6 +33,9 @@ const Register = () => {
 
   return (
     <>
+      <div className="header-card">
+        <h1>Expense Management System</h1>
+      </div>
       <div className="register-page">
         {loading && <Spinner />}
         <div className="register-card">
@@ -61,6 +65,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -1,4 +1,28 @@
-.register-page {
+/* RegisterPage.css */
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header card styles */
+  .header-card {
+    background-color: #e6e6e6;
+    text-align: center;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+  }
+  
+  .header-card h1 {
+    margin: 0;
+    color: #344265;
+  }
+  
+  /* Register page styles */
+  .register-page {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -13,10 +37,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px;
     width: 60%;
+    border-radius: 10px;
   }
   
   .register-image {
-    width: 60%; /* Increased image size */
+    width: 60%;
   }
   
   .register-image img {
@@ -52,12 +77,12 @@
   }
   
   .register-form input {
-    font-size: 14px; /* Adjust input field size */
-    padding: 8px 12px; /* Adjust input field padding */
+    font-size: 14px;
+    padding: 8px 12px;
   }
   
   .register-form button {
-    padding: 8px 16px; /* Adjust button padding */
+    padding: 8px 16px;
   }
   
   .register-form input:focus {
