@@ -1,8 +1,11 @@
 # Expense-Manager
-• Developed an Expense Manager web application using MERN stack. • Built a user-friendly interface with Ant-Design to visualize expenses into different categories. Tracked income and expenses to help users manage their finances. • Used MongoDB Atlas for implementing login and registration pages for user authentication and storing data.
+• Developed an Expense Manager web application using MERN stack.  
+• Built a user-friendly interface with Ant-Design to visualize expenses into different categories. Tracked income and expenses to help users manage their finances. 
+ 
+ • Used MongoDB Atlas for implementing login and registration pages for user authentication and storing data.
 
 ## Live Link:
-https://helpful-plum-turtle.cyclic.app/
+https://helpful-plum-turtle.cyclic.app/  
 Register as a new user or use demo ID given below
 
 ### Demo ID
