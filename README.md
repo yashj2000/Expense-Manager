@@ -4,7 +4,9 @@
 ## Live Link:
 https://helpful-plum-turtle.cyclic.app/
 Register as a new user or use demo ID given below
-Demo ID: dummy@gmail.com
+
+### Demo ID
+Email: dummy@gmail.com
 Password: 123456
 
 # Snapshots
